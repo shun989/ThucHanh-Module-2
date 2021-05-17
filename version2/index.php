@@ -38,8 +38,8 @@ $products = $productManager->getAllProduct();
         height: 25px;
     }
 
-    tr:hover {
-        background-color: #dbd3c5;
+    .view:hover {
+        background-color: #eeebe7;
     }
 
     a {
@@ -78,7 +78,7 @@ $products = $productManager->getAllProduct();
         <th colspan="2">Option</th>
     </tr>
     <?php foreach ($products as $key => $product): ?>
-        <tr>
+        <tr class="view">
             <td><?php echo $key + 1 ?></td>
             <td><?php echo $product->getName() ?></td>
             <td><?php echo $product->getProductLine() ?></td>
