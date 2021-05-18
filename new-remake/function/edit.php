@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $database = new DBConect();
     $conn = $database->connect();
     $id = $_REQUEST['id'];
-    $sql = "UPDATE products SET productName = '$name', productLine = '$type', price = '$price',amount = '$amount',status = $status WHERE id= $id";
+    $sql = "UPDATE products SET productName = '$name', productLine = '$type', price = '$price',amount = '$amount',status = '$status' WHERE id= '$id'";
     $conn->query($sql);
 
     echo "thay doi thanh cong";
